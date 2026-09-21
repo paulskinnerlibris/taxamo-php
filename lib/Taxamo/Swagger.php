@@ -34,7 +34,7 @@ function swagger_autoloader($className) {
 }
 spl_autoload_register('Taxamo\\swagger_autoloader');
 
-
+#[\AllowDynamicProperties]
 class APIClient {
 
 	public static $POST = "POST";

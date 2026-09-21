@@ -21,7 +21,7 @@
  */
 
 require(dirname(__FILE__) . '/Taxamo/Swagger.php');
-
+#[\AllowDynamicProperties]
 class Taxamo {
 
     public static $VERSION = "2.0.7";
