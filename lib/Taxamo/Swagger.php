@@ -288,7 +288,7 @@ class TaxamoAPIException extends \Exception {
     public $post_data;
     public $response;
 
-    public function __construct($message, $post_data, $response, $code = 0, Exception $previous = null) {
+    public function __construct($message, $post_data, $response, $code = 0, ?\Throwable $previous = null) {
         parent::__construct($message, $code, $previous);
         $this->post_data = $post_data;
         $this->response = $response;
@@ -303,7 +303,7 @@ class TaxamoValidationException extends TaxamoAPIException {
     public $errors;
     public $validation_failures;
 
-    public function __construct($message, $post_data, $response, $errors=null, $validation_failures=null, $code = 0, Exception $previous = null) {
+    public function __construct($message, $post_data, $response, $errors=null, $validation_failures=null, $code = 0, ?\Throwable $previous = null) {
         parent::__construct($message, $post_data, $response, $code, $previous);
         $this->errors = $errors;
         $this->validation_failures = $validation_failures;
